@@ -1,0 +1,65 @@
+.face {
+  .square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+  }
+}
+
+$face-colors: (
+  "orange": #f90,
+  "green": rgb(31, 141, 31),
+  "blue": rgb(0, 0, 215),
+  "red": rgb(191, 2, 2),
+  "yellow": rgb(245, 245, 0),
+  "white": #fff,
+);
+
+@each $face, $color in $face-colors {
+  .square-#{$face} {
+    background-color: $color;
+  }
+}
+
+$gray-colors: (
+  100: #f8f9fa,
+  200: #e9ecef,
+  300: #dee2e6,
+  400: #ced4da,
+  500: #adb5bd,
+  600: #6c757d,
+  700: #495057,
+  800: #343a40,
+  900: #212529,
+);
+
+@each $key, $value in $gray-colors {
+  .bg-gray-#{$key} {
+    background-color: $value;
+  }
+}
+
+/* SCSS RGB */
+$shamrock-green: rgba(77, 161, 103, 1);
+$dark-pastel-green: rgba(59, 193, 74, 1);
+$cool-gray: rgba(140, 134, 170, 1);
+$prussian-blue: rgba(28, 48, 65, 1);
+$yellow: rgba(255, 252, 49, 1);
+
+$primary: $cool-gray;
+// $warning: $yellow;
+$succes: $dark-pastel-green;
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+body {
+  color: white;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.modal-title {
+  color: black;
+}

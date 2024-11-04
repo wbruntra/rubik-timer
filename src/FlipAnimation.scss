@@ -1,0 +1,34 @@
+.container {
+  margin-top: 100px;
+  perspective: 1000px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transition: transform 1s;
+}
+
+.card-bottom {
+    background-color: #f00; /* Red */
+  transform: rotateX(-90deg) translateY(-50px);
+  transform-origin: top;
+}
+
+.card-front {
+  background-color: #00f; /* Blue */
+  transform: rotateY(0deg);
+  transform-origin: bottom;
+}
+
+.container:hover .card-bottom {
+  transform: rotateX(0deg) translateY(0);
+}
+
+.container:hover .card-front {
+  transform: rotateX(90deg);
+}
